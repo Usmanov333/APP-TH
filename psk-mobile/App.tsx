@@ -6,22 +6,22 @@ import RootNavigator from './src/navigation/AppNavigator';
 import { AuthProvider } from './src/context/AuthContext';
 
 const navTheme: Theme = {
-	...DefaultTheme,
-	colors: {
-		...DefaultTheme.colors,
-		background: '#ffffff',
-	},
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: '#ffffff',
+  },
 };
 
 export default function App() {
-	return (
-		<GestureHandlerRootView style={{ flex: 1 }}>
-			<AuthProvider>
-				<NavigationContainer theme={navTheme}>
-					<StatusBar style="auto" />
-					<RootNavigator />
-				</NavigationContainer>
-			</AuthProvider>
-		</GestureHandlerRootView>
-	);
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AuthProvider>
+        <NavigationContainer theme={navTheme}>
+          <StatusBar style="auto" />
+          <RootNavigator />
+        </NavigationContainer>
+      </AuthProvider>
+    </GestureHandlerRootView>
+  );
 }
